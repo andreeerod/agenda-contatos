@@ -15,16 +15,22 @@ body {
     margin: 0;
     min-height: 100vh;
     font-family: "Rubik", system-ui, sans-serif;
-    font-size: 16px;
-    background: var(--fundo);
+    font-size: 19px;
+    background-color: var(--fundo);
+    background-image:
+        radial-gradient(60rem 40rem at 10% -10%, rgba(79, 70, 229, .22), transparent 60%),
+        radial-gradient(50rem 36rem at 100% 0%, rgba(244, 163, 94, .28), transparent 60%),
+        radial-gradient(rgba(28, 27, 31, .08) 1px, transparent 1px);
+    background-size: auto, auto, 22px 22px;
+    background-attachment: fixed;
     color: var(--texto);
     -webkit-font-smoothing: antialiased;
 }
 
 main {
-    max-width: 680px;
-    margin: 48px auto;
-    padding: 32px;
+    max-width: 780px;
+    margin: 56px auto;
+    padding: 40px;
     background: var(--cartao);
     border: 1px solid var(--borda);
     border-radius: 16px;
@@ -42,7 +48,7 @@ main {
 
 h1 {
     margin: 0;
-    font-size: 1.75rem;
+    font-size: 2.4rem;
     font-weight: 600;
     letter-spacing: -.02em;
 }
@@ -50,7 +56,7 @@ h1 {
 .contador {
     margin: 0;
     padding: 4px 12px;
-    font-size: .85rem;
+    font-size: 1rem;
     font-weight: 500;
     color: var(--cor-escura);
     background: var(--cor-clara);
@@ -70,7 +76,7 @@ label {
     display: flex;
     flex-direction: column;
     gap: 6px;
-    font-size: .8rem;
+    font-size: .9rem;
     font-weight: 500;
     color: var(--suave);
     text-transform: uppercase;
@@ -79,9 +85,9 @@ label {
 
 input {
     width: 100%;
-    padding: 12px 14px;
+    padding: 14px 16px;
     font: inherit;
-    font-size: 1rem;
+    font-size: 1.1rem;
     text-transform: none;
     letter-spacing: 0;
     color: var(--texto);
@@ -101,8 +107,9 @@ input:focus {
 }
 
 button {
-    padding: 12px 24px;
+    padding: 14px 28px;
     font: inherit;
+    font-size: 1.1rem;
     font-weight: 500;
     color: #fff;
     background: var(--cor);
@@ -125,7 +132,7 @@ table {
 th {
     padding: 10px 12px;
     text-align: left;
-    font-size: .75rem;
+    font-size: .9rem;
     font-weight: 500;
     color: var(--suave);
     text-transform: uppercase;
@@ -134,7 +141,8 @@ th {
 }
 
 td {
-    padding: 14px 12px;
+    padding: 18px 12px;
+    font-size: 1.15rem;
     border-bottom: 1px solid var(--borda);
 }
 
@@ -152,11 +160,11 @@ td:last-child { color: var(--suave); font-variant-numeric: tabular-nums; }
 
 .avatar {
     flex: none;
-    width: 34px;
-    height: 34px;
+    width: 42px;
+    height: 42px;
     display: grid;
     place-items: center;
-    font-size: .9rem;
+    font-size: 1.1rem;
     font-weight: 600;
     color: var(--cor-escura);
     background: var(--cor-clara);
@@ -173,5 +181,6 @@ td:last-child { color: var(--suave); font-variant-numeric: tabular-nums; }
 
 @media (max-width: 600px) {
     main { margin: 0; padding: 20px; border: 0; border-radius: 0; min-height: 100vh; box-shadow: none; }
+    h1 { font-size: 2rem; }
     form { grid-template-columns: 1fr; }
 }
