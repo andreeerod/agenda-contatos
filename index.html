@@ -4,15 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agenda de contatos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main>
-        <h1>Agenda de contatos</h1>
+        <header class="topo">
+            <h1>Agenda de contatos</h1>
+            <p class="contador" id="contador">Nenhum contato</p>
+        </header>
 
         <form id="form-contato">
-            <input type="text" id="nome" placeholder="Nome" required>
-            <input type="tel" id="telefone" placeholder="Telefone" required>
+            <label>
+                Nome
+                <input type="text" id="nome" placeholder="Ex.: Ana Silva" required>
+            </label>
+            <label>
+                Telefone
+                <input type="tel" id="telefone" placeholder="Ex.: (11) 99999-1111" required>
+            </label>
             <button type="submit">Cadastrar</button>
         </form>
 
@@ -25,6 +37,7 @@
             </thead>
             <tbody id="lista-contatos"></tbody>
         </table>
+        <p class="vazio" id="vazio">Nenhum contato cadastrado ainda.</p>
     </main>
     <script src="script.js"></script>
 </body>
